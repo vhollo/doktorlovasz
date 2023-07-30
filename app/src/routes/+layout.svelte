@@ -1,6 +1,5 @@
-<div class="container">
 	<header class="header">
-		<a class="header__title" href="/">SvelteKit + Sanity</a>
+		<a class="header__title" href="/"><h1>Dr. Lovász Sándor Ph.D.</h1></a>
 	</header>
 	<main>
 		<slot />
@@ -20,7 +19,6 @@
 					stroke="currentColor"
 					stroke-width="1.2"
 				/></svg
-			> at Sanity
+			> by UroSystem
 		</p>
 	</footer>
-</div>
