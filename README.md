@@ -1,4 +1,4 @@
-# A minimal SvelteKit site with Sanity Studio
+# SvelteKit site with Sanity Studio
 
 This starter uses [SvelteKit](https://kit.svelte.dev/) for the frontend and [Sanity](https://sanity.io/) to handle its content.
 
