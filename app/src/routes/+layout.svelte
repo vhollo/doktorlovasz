@@ -19,6 +19,6 @@
 					stroke="currentColor"
 					stroke-width="1.2"
 				/></svg
-			> by UroSystem
+			> @UroSystem
 		</p>
 	</footer>

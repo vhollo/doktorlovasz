@@ -20,7 +20,9 @@
 	<div class="post__container">
 		<div class="post__content">
 
-    {#if data.mainImage}
+    {#if !!data.mainImage}
+      {@const src = data.mainImage}
+      {@debug src}
       <p>
         <img
           class="post__contains"
@@ -33,7 +35,7 @@
     {/if}
 
       <h1 class="post__title">{data.title}</h1>
-  		<p class="post__excerpt">{data.excerpt}</p>
+  		{#if data.excerpt}<div class="post__excerpt">{data.excerpt}</div>{/if}
       <p class="post__date">Frissítve: 
         {formatDate(data._createdAt)}
       </p>
