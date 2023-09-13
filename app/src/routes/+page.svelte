@@ -3,6 +3,7 @@
 	//import Welcome from '../components/Welcome.svelte';
 	import { PortableText } from '@portabletext/svelte';
 	import { formatDate } from '$lib/utils';
+	import internalLink from '$lib/utils/internalLink.svelte';
 	import { urlFor } from '$lib/utils/image';
 	import type { PageData } from './$types';
 
@@ -10,20 +11,15 @@
   //console.log(data.body)
   const formatBody = {
     marks: {
-      internalLink: ({value, children}) => {
-        const {slug = {}} = value
-        const href = `/${slug.current}`
-        return `<a href=${href}>{children}</a>
-        `
-      },
-      link: ({value, children}) => {
+      internalLink: internalLink,
+      /*link: ({value, children}) => {
         // Read https://css-tricks.com/use-target_blank/
         const { blank, href } = value
         return blank ?
           `<a href=${href} target="_blank" rel="noopener">{children}</a>
           ` : `<a href=${href}>{children}</a>
           `
-      }
+      }*/
     }
   }
 </script>
