@@ -1,13 +1,31 @@
 <script lang="ts">
-	import Card from '../components/Card.svelte';
-	import Welcome from '../components/Welcome.svelte';
+	//import Card from '../components/Card.svelte';
+	//import Welcome from '../components/Welcome.svelte';
 	import { PortableText } from '@portabletext/svelte';
 	import { formatDate } from '$lib/utils';
 	import { urlFor } from '$lib/utils/image';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-  console.log(data.body)
+  //console.log(data.body)
+  const formatBody = {
+    marks: {
+      internalLink: ({value, children}) => {
+        const {slug = {}} = value
+        const href = `/${slug.current}`
+        return `<a href=${href}>{children}</a>
+        `
+      },
+      link: ({value, children}) => {
+        // Read https://css-tricks.com/use-target_blank/
+        const { blank, href } = value
+        return blank ?
+          `<a href=${href} target="_blank" rel="noopener">{children}</a>
+          ` : `<a href=${href}>{children}</a>
+          `
+      }
+    }
+  }
 </script>
 
 <!--
@@ -22,53 +40,44 @@
 </section>
 -->
 
-<section class="post">
-	<!--{#if data.mainImage}
-		<img
-			class="post__contains"
-			src={urlFor(data.mainImage).url()}
-			alt="Cover image for {data.title}"
-		/>
-	{:else}
-		<div class="post__cover--none" />
-	{/if}-->
-	<div class="post__container">
-		<div class="post__content">
+<article class="post prose gap-x-0 gap-y-0">
 
-      {#if !!data.mainImage}
-        <p>
-          <img
-            class="post__contains"
-            src={urlFor(data.mainImage).url()}
-            alt="Cover image for {data.title}"
-          />
-        </p>
-      {:else}
-        <p class="post__cover--none" />
-      {/if}
-      <div>
-        <h2 class="post__title">{data.title}</h2>
-        {#if data.excerpt}<div class="post__excerpt">{data.excerpt}</div>{/if}
-      </div>
-      <aside>
-        <a href={`/post${data.cta.link}`}><button>{data.cta.text}</button></a>
-      </aside>
-      <date class="post__date">Frissítve: 
-        {formatDate(data._createdAt)}
-      </date>
-			<PortableText value={data.body} />
-		</div>
-	</div>
-</section>
+  {#if !!data.mainImage}
+    <figure>
+      <img
+        class="post__contains"
+        src={urlFor(data.mainImage).url()}
+        alt="Cover image for {data.title}"
+      />
+    </figure>
+  {:else}
+    <p class="post__cover--none" />
+  {/if}
+  <header>
+    <h2 class="post__title">{data.title}</h2>
+    {#if data.excerpt}<div class="post__excerpt">{data.excerpt}</div>{/if}
+    {#if data.cta}
+    <aside>
+      <a href={`${data.cta.link}`}>[&thinsp;<button>{data.cta.text}]</button></a>
+    </aside>
+    {/if}
+  </header>
+  <date class="post__date text-sm">Frissítve: 
+    {formatDate(data._createdAt)}
+  </date>
+  <PortableText value={data.body} components={formatBody}/>
+</article>
 
 <style>
-  aside {
-    grid-column-end: span 2;
-    margin-inline: auto;
-    text-align: center;
-  }
   img {
     margin-inline: auto;
     min-height: 25vh;
   }
+  article :global(p) {
+    margin-block: 0;
+  }
+
+  /*article {
+    @apply mx-4;
+  }*/
 </style>

@@ -1,3 +1,7 @@
+//import { setContext, afterUpdate, onMount, tick } from 'svelte';
+import getContext from 'svelte';
+const { data } = { getContext };
+console.log({data})
 import type { PortableTextBlock } from '@portabletext/types';
 import { createClient } from '@sanity/client';
 import type { ImageAsset, Slug } from '@sanity/types';
@@ -23,7 +27,17 @@ export async function getPosts(): Promise<Post[]> {
 }
 
 export async function getPost(slug: string): Promise<Post> {
-	return await client.fetch(groq`*[_type == "post" && slug.current == $slug][0]{
+	return await client.fetch(
+    groq`*[_type == "post" && slug.current == data.slug],
+    `/*{
+      body {}{
+        markDefs[]{...}
+	    }
+    }*/
+  );
+}
+export async function gettPost(slug: string): Promise<Post> {
+	return await client.fetch(groq`*[_type == "post" && slug.current == data.slug]{
     ...,
     body[]{
       ...,
@@ -34,16 +48,17 @@ export async function getPost(slug: string): Promise<Post> {
         }
       }
     }
-  }`, {
-		slug
-	});
+  }`);
 }
+
+
 
 export interface Post {
 	_type: 'post';
 	_createdAt: string;
 	title?: string;
 	slug: Slug;
+	cta?: {link: string, text: string};
 	excerpt?: string;
 	mainImage?: ImageAsset;
 	body: PortableTextBlock[];
