@@ -39,7 +39,7 @@
 <article class="post prose gap-x-0 gap-y-0">
 
   {#if !!data.mainImage}
-    <figure>
+    <figure class="mainimg">
       <img
         class="post__contains"
         src={urlFor(data.mainImage).url()}
@@ -65,10 +65,6 @@
 </article>
 
 <style>
-  img {
-    margin-inline: auto;
-    min-height: 25vh;
-  }
   article :global(p) {
     margin-block: 0;
   }
