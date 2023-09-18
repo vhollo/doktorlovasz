@@ -38,6 +38,11 @@
   main {
     @apply mt-12 p-12;
   }
+  @media only screen and (max-width: 104ch) {
+    main {
+      padding-inline: 6rem;
+    }
+  }
 
   footer > p {
     @apply w-max;

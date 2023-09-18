@@ -376,12 +376,12 @@ __metadata:
 
 "@portabletext/svelte@patch:@portabletext/svelte@npm%3A2.1.1#./.yarn/patches/@portabletext-svelte-npm-2.1.1-52e3ac5001.patch::locator=app%40workspace%3A.":
   version: 2.1.1
-  resolution: "@portabletext/svelte@patch:@portabletext/svelte@npm%3A2.1.1#./.yarn/patches/@portabletext-svelte-npm-2.1.1-52e3ac5001.patch::version=2.1.1&hash=9b1eab&locator=app%40workspace%3A."
+  resolution: "@portabletext/svelte@patch:@portabletext/svelte@npm%3A2.1.1#./.yarn/patches/@portabletext-svelte-npm-2.1.1-52e3ac5001.patch::version=2.1.1&hash=0200bc&locator=app%40workspace%3A."
   dependencies:
     "@portabletext/toolkit": ^2.0.8
   peerDependencies:
     svelte: ">=3.47.0 <5.0.0"
-  checksum: 5569f6acb4ff34d9b8fc5379dce515d2f6e2d4ce4d81328d05878f9f5c8ede78ea74e00feac2a81f073cfb7d19bc3a9d05e0418944c3d81f11118e86b3f6908f
+  checksum: e01514513faa2902738824603615007331f6fad65c0e7fe5922cd88813e1d6b9a7bde64318db5be097276d22ddb1a523b92a9b017e3760f1d9b661dbcf11728e
   languageName: node
   linkType: hard
 
