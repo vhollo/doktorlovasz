@@ -32,7 +32,7 @@
 
 <style>
   header {
-    @apply h-12 items-center;
+    @apply h-12 items-center bg-white;
   }
   
   main {
