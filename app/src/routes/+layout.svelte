@@ -5,14 +5,14 @@
 
 <nav></nav>
 
-<header class="header">
+<header>
 	<a href="/" class="mx-auto"><h1 class="header__title">Dr. Lovász Sándor Ph.D.</h1></a>
 </header>
-<main class="max-w-prose mx-auto">
+<main class="mt-12 p-12 mx-auto">
 	<slot />
 </main>
-<footer class="footer flex flex-row">
-	<p class="footer__text mx-auto">
+<footer class="flex flex-row">
+	<p class="mx-auto w-max">
 		Made with <svg
 			data-sanity-icon="heart-filled"
 			width="1em"

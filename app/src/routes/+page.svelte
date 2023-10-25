@@ -4,11 +4,12 @@
 	import { PortableText } from '@portabletext/svelte';
 	import { formatDate } from '$lib/utils';
 	import internalLink from '$lib/utils/internalLink.svelte';
-	import { urlFor } from '$lib/utils/image';
+	import { urlFor } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
   //console.log(data.body)
+  
   const formatBody = {
     marks: {
       internalLink: internalLink,
@@ -36,7 +37,7 @@
 </section>
 -->
 
-<article class="post prose gap-x-0 gap-y-0">
+<article class="prose gap-x-8 gap-y-0">
 
   {#if !!data.mainImage}
     <figure class="mainimg">
@@ -50,8 +51,8 @@
     <p class="post__cover--none" />
   {/if}
   <header>
-    <h2 class="post__title">{data.title}</h2>
-    {#if data.excerpt}<div class="post__excerpt">{data.excerpt}</div>{/if}
+    <h1 class="post__title">{data.title}</h1>
+    {#if data.excerpt}<p class="post__excerpt">{data.excerpt}</p>{/if}
     {#if data.cta}
     <aside>
       <a href={`${data.cta.link}`}>[&thinsp;<button>{data.cta.text}]</button></a>
@@ -59,16 +60,15 @@
     {/if}
   </header>
   <date class="post__date text-sm">Frissítve: 
-    {formatDate(data._createdAt)}
+    {formatDate(data._updateAt || data._createdAt)}
   </date>
   <PortableText value={data.body} components={formatBody}/>
 </article>
 
 <style>
-  article :global(p) {
+  article.prose :global(p) {
     margin-block: 0;
   }
-
   /*article {
     @apply mx-4;
   }*/

@@ -4,7 +4,7 @@
 
 :root {
 	--rounded-btn: 1rem;
-  --max-pad: 1rem;
+  --max-pad: 2rem;
 }
 
 /*body {
@@ -44,7 +44,8 @@ article {
   display: grid;
 	grid-template-columns: repeat(2, minmax(33ch, 1fr));
   gap: 3rem;
-  margin-inline-start: calc(var(--max-pad)/3);
+  margin-inline: auto;
+  max-width:65ch;
 }
 @media only screen and (max-width: 104ch) {
   article {
@@ -92,8 +93,7 @@ article > h1,
 article > h2,
 article > h3,
 article > h4,
-article > a
-{
+article > a {
 	grid-column-end: span 2;
 	/* grid-row-end: span 2; */
 /*	max-width: 80ch;*/
@@ -104,4 +104,5 @@ article > a
 
 
 @tailwind components;
+
 @tailwind utilities;
