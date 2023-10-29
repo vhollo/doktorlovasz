@@ -3,11 +3,9 @@
 	import '$src/app.postcss';
 </script>
 
-<nav></nav>
-
-<header>
-	<a href="/" class="mx-auto"><h1 class="header__title">Dr. Lovász Sándor Ph.D.</h1></a>
-</header>
+<nav>
+	<a href="/" class="mx-auto"><h1 class="nav__title">Dr. Lovász Sándor Ph.D.</h1></a>
+</nav>
 <main class="mt-12 p-12 mx-auto">
 	<slot />
 </main>
@@ -31,8 +29,8 @@
 </footer>
 
 <style>
-  header {
-    @apply h-12 items-center bg-white;
+  nav {
+    @apply h-12 items-center;
   }
   
   main {
