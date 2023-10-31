@@ -1,4 +1,5 @@
 <script>
+	import '../app.postcss';
 	//import '../app.postcss';
 	import '$src/app.postcss';
 </script>
@@ -28,25 +29,25 @@
 	</p>
 </footer>
 
-<style>
-  nav {
-    @apply h-12 items-center;
-  }
-  
-  main {
-    @apply mt-12 p-12;
-  }
-  @media only screen and (max-width: 104ch) {
-    main {
-      padding-inline: 6rem;
-    }
-  }
+<style type="postcss">
+	nav {
+		@apply h-12 items-center;
+	}
 
-  footer > p {
-    @apply w-max;
-  }
-  
-  svg {
-    display: inline-block;
-  }
+	main {
+		@apply mt-12 p-12;
+	}
+	@media only screen and (max-width: 104ch) {
+		main {
+			padding-inline: 6rem;
+		}
+	}
+
+	footer > p {
+		@apply w-max;
+	}
+
+	svg {
+		display: inline-block;
+	}
 </style>
