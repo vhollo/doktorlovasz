@@ -1,11 +1,13 @@
 <script>
-	import '../app.postcss';
-	//import '../app.postcss';
 	import '$src/app.postcss';
 </script>
 
 <nav>
-	<a href="/" class="mx-auto"><h1 class="nav__title">Dr. Lovász Sándor Ph.D.</h1></a>
+	<a href="/" class="mx-auto"><h1 class="nav__title">Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
+  <ul class="menu menu-horizontal menu-sm">
+    <li><a href="eletrajz">Szakmai életrajz</a></li>
+    <li><a href="publikaciok">Publikációk</a></li>
+  </ul>
 </nav>
 <main class="mt-12 p-12 mx-auto">
 	<slot />
@@ -31,7 +33,8 @@
 
 <style type="postcss">
 	nav {
-		@apply h-12 items-center;
+		@apply h-12 items-center mx-auto;
+    max-width: 65ch;
 	}
 
 	main {

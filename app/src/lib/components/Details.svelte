@@ -36,7 +36,8 @@
 </article>
 
 <style>
-  /*article {
-    @apply mx-4;
-  }*/
+  details > summary, details > :global(p) {
+  margin-bottom: .5rem;
+}
+
 </style>
