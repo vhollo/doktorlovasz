@@ -5,6 +5,9 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+  <meta name="description" content={data.desc} />
+</svelte:head>
 
 {#each data.pageBuilder as content, ix}
   <Comps {content} {ix}/>

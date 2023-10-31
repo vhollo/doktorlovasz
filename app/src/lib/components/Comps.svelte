@@ -18,7 +18,7 @@
   export let content: PageData;
 	export let ix: Number;
 
-  console.log({content})
+  //console.log({content})
 </script>
 
 <svelte:component this={comps[content._type]} {content} {ix}/>

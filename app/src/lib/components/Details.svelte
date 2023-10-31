@@ -36,6 +36,9 @@
 </article>
 
 <style>
+  details > summary {
+  cursor: pointer;
+}
   details > summary, details > :global(p) {
   margin-bottom: .5rem;
 }
