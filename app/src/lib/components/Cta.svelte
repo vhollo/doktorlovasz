@@ -8,8 +8,15 @@
 
 <aside class="mx-auto text-center">
   <a href={content.href} rel={ext ? 'extarnal noopener' : ''} target={ext ? '_blank' : ''}>
-    <button class="btn">
+    <button class="btn btn-sm">
       {content.text}
     </button>
   </a>
 </aside>
+
+<style>
+  aside {
+  margin-block: 3rem;
+}
+
+</style>

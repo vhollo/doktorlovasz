@@ -8,7 +8,7 @@
 	export let content: PageData;
 	//export let ix: Number;
 
-  const formatBody = {
+  const formatBody = { /// TODO: move to utils and import this
     marks: {
       internalLink: internalLink,
       link: Link,
@@ -18,21 +18,33 @@
       number: DefaultListItem
     },
   }
-  console.log({content})
+  //console.log({content})
 </script>
 
 
 <article class="prose gap-x-8 gap-y-0">
   {#if content.details}
+    <div class="collapse collapse-arrow bg-base-200">
+      <input type="radio" name="details" /> 
+      <p class="collapse-title text-xl font-medium">
+        <b>{content.summary}</b>
+      </p>
+      <div class="collapse-content"> 
+        <PortableText value={content.details} components={formatBody}/>
+      </div>
+    </div>
+  {:else}
+    <p class="text-xl font-medium">{content.summary}</p>
+  {/if}
+  
+  <!--{#if content.details}
     <details>
       <summary><b>{content.summary}</b></summary>
-      {#if content.details}
-        <PortableText value={content.details} components={formatBody}/>
-      {/if}
+      <PortableText value={content.details} components={formatBody}/>
     </details>
   {:else}
     <p><b>{content.summary}</b></p>
-  {/if}
+  {/if}-->
 </article>
 
 <style>

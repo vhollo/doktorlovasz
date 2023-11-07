@@ -17,10 +17,17 @@
 {#each data.pageBuilder as content, ix}
   <Comps {content} {ix}/>
   {#if ix == 1}
-    <aside class="mx-auto text-center">
+    <aside class="mx-auto text-center text-secondary">
       <date class="text-sm">Frissítve: 
         {formatDate(data._updateAt || data._createdAt)}
       </date>
     </aside>
   {/if}    
 {/each}
+
+<style>
+  aside {
+  margin-block: 3rem;
+}
+
+</style>
