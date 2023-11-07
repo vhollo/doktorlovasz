@@ -12,15 +12,29 @@
   })
 </script>
 
-<nav class="navbar bg-base-100">
+<nav class="navbar mx-auto h-16 border-b-2 bg-base-100">
 	<a class="flex-none" href="/"><h1>Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
-  <ul class="flex-1 menu menu-horizontal menu-sm">
+
+  <ul class="hidden md:flex flex-1 menu menu-horizontal menu-sm">
     <li><a href="ic-bps">IC/BPS</a></li>
     <li><a href="eletrajz">Szakmai életrajz</a></li>
     <li><a href="talalmanyok">Találmányok</a></li>
     <li><a href="publikaciok">Publikációk</a></li>
   </ul>
+
+  <div class="dropdown dropdown-end ml-auto md:hidden">
+    <button class="btn btn-ghost btn-sm p-1">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+    </button>
+    <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <li><a href="ic-bps">IC/BPS</a></li>
+      <li><a href="eletrajz">Szakmai életrajz</a></li>
+      <li><a href="talalmanyok">Találmányok</a></li>
+      <li><a href="publikaciok">Publikációk</a></li>
+      </ul>
+  </div>
 </nav>
+
 {#if dev}
   <div class="drawer drawer-end">
     <input id="my-drawer" type="checkbox" class="drawer-toggle" />
@@ -50,6 +64,7 @@
     </div>
   </div>
 {/if}
+
 <main class="mt-12 p-12 mx-auto">
   <!--<select data-choose-theme>
     <option value="light">Light</option>
@@ -90,7 +105,6 @@
 
 <style type="postcss">
 	nav {
-		@apply h-16 items-center mx-auto border-b-2;
     max-width: 65ch;
     position: sticky;
     top: 0;
