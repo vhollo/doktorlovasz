@@ -23,7 +23,7 @@
   </ul>
 
   <div class="dropdown dropdown-end ml-auto md:hidden">
-    <button class="btn btn-ghost btn-sm p-1">
+    <button aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </button>
     <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
