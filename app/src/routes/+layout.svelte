@@ -90,12 +90,15 @@
 
 <style type="postcss">
 	nav {
-		@apply h-16 items-center mx-auto;
+		@apply h-16 items-center mx-auto border-b-2;
     max-width: 65ch;
-    /*position: fixed;*/
+    position: sticky;
     top: 0;
-    margin-inline: auto;
+    z-index: 999;
 	}
+  nav ul {
+    justify-content: end;
+  }
 
   .drawer {
     position: fixed;

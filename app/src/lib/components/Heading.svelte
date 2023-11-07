@@ -13,7 +13,7 @@
     {@const image = content.image}
     <figure class="gap-x-8 gap-y-0 flex flex-1">
       <img
-        class="object-contain"
+        class="object-contain filter-none"
         src={urlFor(image).url()}
         alt="Cover image for {image.alt}"
       />
