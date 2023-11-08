@@ -3,7 +3,6 @@
   import { onMount } from 'svelte'
   import { themeChange } from 'theme-change'
   import { dev } from '$app/environment'
-  export const prerender = true;
 
   // NOTE: the element that is using one of the theme attributes must be in the DOM on mount
   onMount(() => {
@@ -15,18 +14,20 @@
 <nav class="navbar mx-auto h-16 border-b-2 bg-base-100">
 	<a class="flex-none" href="/"><h1>Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
 
-  <ul class="hidden sm:flex flex-1 menu menu-horizontal menu-sm">
+  <ul class="hidden md:flex flex-1 menu menu-horizontal menu-sm">
+    <li><a href="rendeles">Rendelési idők</a></li>
     <li><a href="ic-bps">IC/BPS</a></li>
     <li><a href="eletrajz">Szakmai életrajz</a></li>
     <li><a href="talalmanyok">Találmányok</a></li>
     <li><a href="publikaciok">Publikációk</a></li>
   </ul>
 
-  <div class="dropdown dropdown-end ml-auto sm:hidden">
+  <div class="dropdown dropdown-end ml-auto md:hidden">
     <button aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </button>
     <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <li><a href="rendeles">Rendelési idők</a></li>
       <li><a href="ic-bps">IC/BPS</a></li>
       <li><a href="eletrajz">Szakmai életrajz</a></li>
       <li><a href="talalmanyok">Találmányok</a></li>
@@ -66,18 +67,12 @@
 {/if}
 
 <main class="mt-12 p-2 mx-auto">
-<!--
-  <button class="btn btn-sm">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path fill="none" stroke="#000" stroke-miterlimit="10" d="M10 2C6.7 2 4 4.8 4 8.2c0 2.7 3.6 7.4 5.2 9.4.4.5 1.1.5 1.5 0 1.6-2 5.2-6.8 5.2-9.4C16 4.8 13.3 2 10 2zm0 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>
-  Térkép
-</button>
--->
 	<slot />
 </main>
 
 
 <footer class="footer footer-center flex-nowrap p-4 bg-base-300 text-base-content">
-  <aside>
+  <div>
     <p class="mx-auto w-max">
       Made with <svg
         data-sanity-icon="heart-filled"
@@ -94,10 +89,13 @@
         /></svg
       >&nbsp;at&nbsp;<a href="https://www.urosystem.com/hu">UroSystem</a>
     </p>
-  </aside>
+  </div>
 </footer>
 
 <style type="postcss">
+  footer {
+    display: none;
+  }
 	nav {
     max-width: 90ch;
     position: sticky;
@@ -118,7 +116,4 @@
     z-index: 999;
   }
 
-	svg {
-		display: inline-block;
-	}
 </style>

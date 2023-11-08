@@ -24,10 +24,3 @@
     </aside>
   {/if}    
 {/each}
-
-<style>
-  aside {
-  margin-block: 3rem;
-}
-
-</style>
