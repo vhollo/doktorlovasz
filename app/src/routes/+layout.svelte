@@ -15,14 +15,14 @@
 <nav class="navbar mx-auto h-16 border-b-2 bg-base-100">
 	<a class="flex-none" href="/"><h1>Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
 
-  <ul class="hidden md:flex flex-1 menu menu-horizontal menu-sm">
+  <ul class="hidden sm:flex flex-1 menu menu-horizontal menu-sm">
     <li><a href="ic-bps">IC/BPS</a></li>
     <li><a href="eletrajz">Szakmai életrajz</a></li>
     <li><a href="talalmanyok">Találmányok</a></li>
     <li><a href="publikaciok">Publikációk</a></li>
   </ul>
 
-  <div class="dropdown dropdown-end ml-auto md:hidden">
+  <div class="dropdown dropdown-end ml-auto sm:hidden">
     <button aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </button>
@@ -65,22 +65,16 @@
   </div>
 {/if}
 
-<main class="mt-12 p-12 mx-auto">
-  <!--<select data-choose-theme>
-    <option value="light">Light</option>
-    <option value="emerald">Emerald</option>
-    <option value="retro">Retro</option>
-    <option value="aqua">Aqua</option>
-    <option value="pastel">Pastel</option>
-    <option value="cmyk">CMYK</option>
-    <option value="winter">Winter</option>
-    <option value="dark">Dark</option>
-    <option value="corporate">Corporate</option>
-    <option value="business">Business</option>
-    <option value="night">Night</option>
-  </select>-->
+<main class="mt-12 p-2 mx-auto">
+<!--
+  <button class="btn btn-sm">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path fill="none" stroke="#000" stroke-miterlimit="10" d="M10 2C6.7 2 4 4.8 4 8.2c0 2.7 3.6 7.4 5.2 9.4.4.5 1.1.5 1.5 0 1.6-2 5.2-6.8 5.2-9.4C16 4.8 13.3 2 10 2zm0 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>
+  Térkép
+</button>
+-->
 	<slot />
 </main>
+
 
 <footer class="footer footer-center flex-nowrap p-4 bg-base-300 text-base-content">
   <aside>
@@ -105,7 +99,7 @@
 
 <style type="postcss">
 	nav {
-    max-width: 65ch;
+    max-width: 90ch;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -123,19 +117,6 @@
     margin-left: auto;
     z-index: 999;
   }
-
-	main {
-		@apply mt-12 p-12;
-	}
-	@media only screen and (max-width: 104ch) {
-		main {
-			padding-inline: 6rem;
-		}
-	}
-
-	footer > p {
-		@apply w-max;
-	}
 
 	svg {
 		display: inline-block;
