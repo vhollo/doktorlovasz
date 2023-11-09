@@ -19,7 +19,7 @@
     <label tabindex="0" aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </label>
-    <ul class="menu menu-sm dropdown-content bg-base-100 mt-3 z-[1] p-2 shadow text-base-content rounded-box w-52">
+    <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-primary text-primary-content rounded-box">
       <li><a href="rendeles">Rendelési idők</a></li>
       <li><a href="ic-bps">IC/BPS</a></li>
       <li><a href="eletrajz">Szakmai életrajz</a></li>
@@ -72,6 +72,7 @@
 	}
   nav ul {
     justify-content: end;
+    width: max-content;
   }
 
 </style>
