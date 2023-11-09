@@ -22,11 +22,11 @@
 </script>
 
 
-<article class="prose gap-x-8 gap-y-0">
+<section class="prose gap-x-8 gap-y-0">
   {#if content.details}
     <div class="collapse collapse-arrow bg-base-200">
       <input type="radio" name="details" /> 
-      <p class="collapse-title text-xl font-medium">
+      <p class="collapse-title">
         <b>{content.summary}</b>
       </p>
       <div class="collapse-content"> 
@@ -34,7 +34,7 @@
       </div>
     </div>
   {:else}
-    <p class="text-xl font-medium">{content.summary}</p>
+    <p class="">{content.summary}</p>
   {/if}
   
   <!--{#if content.details}
@@ -45,7 +45,7 @@
   {:else}
     <p><b>{content.summary}</b></p>
   {/if}-->
-</article>
+</section>
 
 <style>
   details > summary {

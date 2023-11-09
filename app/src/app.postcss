@@ -38,6 +38,12 @@ aside {
   margin-block: 3rem;
 }
 
+section {
+  margin-inline: auto;
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+}
+
 article {
   display: grid;
   /*grid-template-columns: repeat(2, minmax(33ch, 1fr));*/
@@ -100,15 +106,15 @@ article a {
   margin-top: 0;
   margin-bottom: 0;
 }
-.prose :where(li):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-}
+/*.prose :where(li):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  margin-top: 0;
+  margin-bottom: 0;
+}*/
 
-.prose p {
+.prose p, .prose ul, .prose li {
   margin-block: 0;
 }
-.prose > p:not(:empty) {
+.prose > p:not(:empty), .prose > ul:not(:empty) {
   margin-top: .75rem; /* ez jo */
 }
 /*.prose > :not(p) ~ p:nth-of-type(odd) {
@@ -122,18 +128,13 @@ article a {
   margin-top: 0!important;
 }*/
 
-article ul {
+.prose ul {
   grid-column-end: span 2;
 }
-article ul,
-article li {
-  padding-inline: 0;
-  margin-inline: 0;
-}
 
-img {
-  @apply drop-shadow-lg
-}
+/*img {
+  @apply drop-shadow-lg;
+}*/
 svg {
   display: inline-block;
 }
