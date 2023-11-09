@@ -13,9 +13,40 @@ const config = {
 
   // daisyUI config (optional - here are the default values)
   daisyui: {
-    themes: ["corporate", "business"], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
+    themes: [
+      "corporate", 
+      "dark", 
+      "light", 
+      "business",
+      {
+        drlovasz: {
+          "primary": "#6e9F9C",
+          "secondary": "#c4b4a6",
+          "accent": "#6e9F9C",
+          "neutral": "#ffffff",
+          "base-100": "#ece7e3",
+          "info": "#3abff8",
+          "success": "#36d399",
+          "warning": "#fbbd23",
+          "error": "#f87272",
+        },
+      },
+      {
+        kriszta: {
+          "primary": "#c4b4a6",
+          "secondary": "#c4b4a6",
+          "accent": "#6e9F9C",
+          "neutral": "#ffffff",
+          "base-100": "#ece7e3",
+          "info": "#3abff8",
+          "success": "#36d399",
+          "warning": "#fbbd23",
+          "error": "#f87272",
+        },
+      },
+    ], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "business", // name of one of the included themes for dark mode
-    lightTheme: "corporate", // name of one of the included themes for dark mode
+    lightTheme: "light", // name of one of the included themes for dark mode
     base: true, // applies background color and foreground color for root element by default
     styled: true, // include daisyUI colors and design decisions for all components
     utils: true, // adds responsive and modifier utility classes

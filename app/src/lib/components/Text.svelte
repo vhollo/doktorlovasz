@@ -6,7 +6,7 @@
   import DefaultListItem from '$lib/utils/DefaultListItem.svelte'
 
 	export let content: PageData;
-	export let ix: Number;
+	let ix: Number;
 
   const formatBody = {
     marks: {
@@ -22,7 +22,7 @@
 </script>
 
 
-<article class="prose gap-x-8 gap-y-0 grid-cols-{content.textBlock.length < 2 ? '1' : '2'}xs">
+<article class="prose gap-x-8 gap-y-0 {content.textBlock.length < 2 ? 'block' : 'grid'}">
   {#if content.title}
     {#if ix == 0}
       <h1>{content.title}</h1>
