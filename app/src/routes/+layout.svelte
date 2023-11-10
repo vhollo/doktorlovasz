@@ -7,7 +7,7 @@
 <nav class="navbar mx-auto h-16 border-b-2 bg-primary text-primary-content">
 	<a class="flex-none" href="/"><h1>Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
 
-  <ul class="hidden md:flex flex-1 menu menu-horizontal menu-sm">
+  <ul class="hidden min-[920px]:flex flex-1 menu menu-horizontal menu-sm">
     <li><a href="rendeles">Rendelési idők</a></li>
     <li><a href="ic-bps">IC/BPS</a></li>
     <li><a href="eletrajz">Szakmai életrajz</a></li>
@@ -15,7 +15,8 @@
     <li><a href="publikaciok">Publikációk</a></li>
   </ul>
 
-  <div class="dropdown dropdown-end ml-auto md:hidden">
+  <div class="dropdown dropdown-end ml-auto min-[920px]:hidden">
+    <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
     <label tabindex="0" aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </label>
@@ -69,6 +70,8 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    font-weight:bold;
+    text-transform: uppercase;
 	}
   nav ul {
     justify-content: end;
