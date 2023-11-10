@@ -9,7 +9,7 @@
 </script>
 
 <section class="card bg-neutral text-neutral-content max-w-prose"><div class="card-body">
-  <article class="prose">
+  <div class="prose">
   {#if content.title}
     {#if ix == 0}
       <h1>{content.title}</h1>
@@ -17,7 +17,7 @@
       <h2>{content.title}</h2>
     {/if}
   {/if}
-  </article>
+  </div>
 {#each content.pageBuilder as c, ix}
   <Comps content={c} ix={0}/>
 {/each}
