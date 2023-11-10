@@ -53,11 +53,8 @@ article {
   display: grid;
   /*grid-template-columns: repeat(2, minmax(33ch, 1fr));*/
   grid-template-columns: auto auto;
-  /*gap: 3rem;*/
-  margin-inline: auto;
+  /*margin-inline: auto;*/
   /*margin-inline: 0;*/
-  /*margin-bottom: 3rem;
-  margin-inline: auto;*/
 }
 @media only screen and (max-width: 65ch) {
   article {
@@ -97,6 +94,7 @@ article > h4,
 article a {
   grid-column-end: span 2;
   margin-inline-start: calc(var(--max-pad) / 2);
+  /*margin-inline-start: auto;*/
 }
 
 .prose :where(p):not(:where([class~='not-prose'], [class~='not-prose'] *)), .prose :where(ul):not(:where([class~='not-prose'], [class~='not-prose'] *)), .prose :where(li):not(:where([class~='not-prose'], [class~='not-prose'] *))  {
@@ -118,8 +116,8 @@ article a {
 .prose > p:not(:empty), .prose > ul:not(:empty) {
   margin-top: .75rem; /* ez jo */
 }
-/*.prose > :not(p) ~ p:nth-of-type(even) {
-  margin-top: 0;
+/*.prose > p:nth-of-type(odd) {
+  margin-inline-end: auto;
 }*/
 
 /*.prose > *:empty {
@@ -164,4 +162,9 @@ svg {
   --tw-prose-pre-bg: hsl(var(--n));
   --tw-prose-th-borders: hsl(var(--c) / 0.5);
   --tw-prose-td-borders: hsl(var(--c) / 0.2);
+}
+
+section > .card-body {
+  margin-inline: 0!important;
+  max-width: none!important;
 }

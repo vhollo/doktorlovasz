@@ -8,7 +8,7 @@
   //console.log(content)
 </script>
 
-<section class="card bg-neutral text-neutral-content max-w-prose"><div class="card-body">
+<section class="card bg-neutral text-neutral-content max-w-prose "><div class="card-body">
   <div class="prose">
   {#if content.title}
     {#if ix == 0}
@@ -24,9 +24,9 @@
 </div></section>
 
 <style>
-  :global(article + h1) {
+  /*:global(article + h1) {
 
-  }
+  }*/
 
   .card-body {
     max-width: max-content;
