@@ -37,10 +37,10 @@ header {
 
 aside {
   /*margin-block: 3rem;*/
-  margin-block: 1.5rem;
-}
-* + aside {
   margin-block: 0;
+}
+aside + *:not(aside) {
+  margin-top: 2.5rem;
 }
 
 section {
