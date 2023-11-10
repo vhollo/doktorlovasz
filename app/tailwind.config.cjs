@@ -35,9 +35,9 @@ const config = {
         kriszta: {
           "primary": "#c4b4a6",
           "secondary": "#c4b4a6",
-          "accent": "#6e9F9C",
+          "accent": "#c4b4a6",
           "neutral": "#ffffff",
-          "base-100": "#ece7e3",
+          "base-100": "#c4b4a6",
           "info": "#3abff8",
           "success": "#36d399",
           "warning": "#fbbd23",
