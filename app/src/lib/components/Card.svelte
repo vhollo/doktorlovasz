@@ -9,7 +9,7 @@
 </script>
 
 <section class="card bg-neutral text-neutral-content max-w-prose "><div class="card-body">
-  <div class="prose">
+  <div class="prose card-title">
   {#if content.title}
     {#if ix == 0}
       <h1>{content.title}</h1>
@@ -31,5 +31,9 @@
   .card-body {
     max-width: max-content;
     margin-inline: auto;
+  }
+
+  .card-title {
+    margin-block-end: .75rem;
   }
 </style>

@@ -22,9 +22,9 @@
 </script>
 
 
-<section class="prose gap-x-8 gap-y-0">
+<section class="prose gap-x-8 gap-y-0 card text-neutral-content max-w-prosee bg-base-200"><div class="card-body">
   {#if content.details}
-    <div class="collapse collapse-arrow bg-base-200">
+    <div class="card-body collapse collapse-arrow">
       <input type="radio" name="details" /> 
       <p class="collapse-title">
         <b>{content.summary}</b>
@@ -34,7 +34,7 @@
       </div>
     </div>
   {:else}
-    <p class="">{content.summary}</p>
+    <p class="card-body">{content.summary}</p>
   {/if}
   
   <!--{#if content.details}
@@ -45,9 +45,18 @@
   {:else}
     <p><b>{content.summary}</b></p>
   {/if}-->
-</section>
+</div></section>
 
 <style>
+  .card-body {
+    max-width: max-content;
+    margin-inline: auto;
+    padding: 0;
+  }
+  p.card-body {
+    padding: 1rem;
+  }
+
   details > summary {
   cursor: pointer;
 }
