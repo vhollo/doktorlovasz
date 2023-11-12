@@ -75,11 +75,22 @@
     text-transform: uppercase;
 	}
 	nav {
-    max-width: 90ch;
+    max-width: 96ch;
 	}
   nav ul {
     justify-content: end;
     width: max-content;
+  }
+
+  nav > a {
+    padding-left: 0;
+    padding-right: 1.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  li:last-child > a {
+    padding-right: 0;
   }
 
 </style>
