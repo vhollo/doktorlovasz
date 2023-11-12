@@ -4,7 +4,8 @@
 	import Themes from '$components/Themes.svelte';
 </script>
 
-<nav class="navbar mx-auto h-16 border-b-2 bg-primary text-primary-content">
+<div class="navbar h-16 border-b-2 bg-primary text-primary-content">
+<nav class="mx-auto">
 	<a class="flex-none" href="/"><h1>Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
 
   <ul class="hidden min-[920px]:flex flex-1 menu menu-horizontal menu-sm">
@@ -29,6 +30,7 @@
       </ul>
   </div>
 </nav>
+</div>
 
 <main class="mt-12 p-2 mx-auto">
 	<slot />
@@ -65,13 +67,15 @@
   footer {
     display: none;
   }
-	nav {
-    max-width: 90ch;
+	.navbar {
     position: sticky;
     top: 0;
     z-index: 999;
     font-weight:bold;
     text-transform: uppercase;
+	}
+	nav {
+    max-width: 90ch;
 	}
   nav ul {
     justify-content: end;
