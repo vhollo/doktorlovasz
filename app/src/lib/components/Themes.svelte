@@ -84,7 +84,8 @@
     .drawer {
     position: sticky;
     bottom: 0;
-    width: 100%;
+    /*width: 100%;*/
+    margin-left: auto;
   }
   .drawer-content {
     margin-left: auto;

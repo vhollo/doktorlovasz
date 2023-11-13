@@ -4,7 +4,7 @@
 	import Themes from '$components/Themes.svelte';
 </script>
 
-<div class="navbar h-16 border-b-2 bg-primary text-primary-content">
+<div class="navbar h-16 border-b-2 bg-primary text-base-content">
 <nav class="mx-auto">
 	<a class="flex-none" href="/"><h1>Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
 

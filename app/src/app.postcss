@@ -44,7 +44,7 @@ section {
 article {
   display: grid;
   /*grid-template-columns: repeat(2, minmax(33ch, 1fr));*/
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, auto);
   /*margin-inline: auto;*/
   /*margin-inline: 0;*/
 }
@@ -107,6 +107,7 @@ article a {
 }*/
 .prose > p:not(:empty), .prose > ul:not(:empty), .prose > h4:not(:empty) {
   margin-top: .75rem; /* ez jo */
+  margin-bottom: 0;
 }
 /*.prose > p:nth-of-type(odd) {
   margin-inline-end: auto;
