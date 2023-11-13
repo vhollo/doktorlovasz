@@ -23,7 +23,7 @@
 
 
   {#if content.details}
-  <section class="prose gap-x-8 gap-y-0 card text-primary-content max-w-prosee bg-secondary"><div class="card-body">
+  <section class="prose gap-x-8 gap-y-0 card text-primary-content max-w-prosee bg-primary"><div class="card-body">
     <div class="card-body collapse collapse-arrow">
       <input type="radio" name="details" /> 
       <p class="collapse-title">
