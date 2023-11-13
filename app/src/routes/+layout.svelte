@@ -1,6 +1,6 @@
 <script>
 	import '$src/app.postcss';
-  import { dev } from '$app/environment'
+  //import { dev } from '$app/environment'
 	import Themes from '$components/Themes.svelte';
 </script>
 

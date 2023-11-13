@@ -12,13 +12,13 @@
 }
 
 .prose p, .prose ul, .prose ol, .prose dl, .prose table, footer + aside p {
-  -webkit-hyphens:auto;-ms-hyphens:auto;hyphens: auto;
+  -webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;
 }
 .prose h3, .prose h4, .prose h5, .prose h6 {
-  -webkit-hyphens:auto;-ms-hyphens:auto;hyphens: auto;
+  -webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;
 }
 @supports ((-webkit-hyphens: auto) or (-ms-hyphens: auto) or (hyphens: auto)) {
-  .prose p:not(figcaption *):not(li *):not(aside *), .prose ol:not(li *):not(aside *), .prose h3, .prose h4, .prose h5, .prose h6 {
+  .prose p:not(figcaption *):not(li *):not(aside *), .prose h3, .prose h4, .prose h5, .prose h6 {
     text-align: justify;
   }
 }
