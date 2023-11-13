@@ -6,7 +6,7 @@
 
 <div class="navbar h-16 border-b-2 bg-primary text-primary-content">
 <nav class="mx-auto">
-	<a class="flex-none" href="/"><h1 class="btn btn-sm text-base normal-case	 text-accent-content bg-accent">Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
+	<a class="flex-none" href="/"><h1 class="btn btn-sm text-base normal-case	 text-primary-content bg-primary">Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
 
   <ul class="hidden min-[920px]:flex flex-1 menu menu-horizontal menu-sm">
     <li><a href="rendeles">Rendelési idők</a></li>
