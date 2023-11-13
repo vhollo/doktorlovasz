@@ -6,7 +6,7 @@
 
 <div class="navbar h-16 border-b-2 bg-primary text-primary-content">
 <nav class="mx-auto">
-	<a class="flex-none" href="/"><h1 class="btn btn-sm text-accent-content bg-accent">Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
+	<a class="flex-none" href="/"><h1 class="btn btn-sm text-base normal-case	 text-accent-content bg-accent">Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
 
   <ul class="hidden min-[920px]:flex flex-1 menu menu-horizontal menu-sm">
     <li><a href="rendeles">Rendelési idők</a></li>
@@ -18,10 +18,11 @@
 
   <div class="dropdown dropdown-end ml-auto min-[920px]:hidden">
     <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+    <!-- svelte-ignore a11y-label-has-associated-control -->
     <label tabindex="0" aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </label>
-    <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-primary text-primary-content rounded-box">
+    <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-primary text-primary-content rounded-box rounded-t-none">
       <li><a href="rendeles">Rendelési idők</a></li>
       <li><a href="ic-bps">IC/BPS</a></li>
       <li><a href="eletrajz">Szakmai életrajz</a></li>
@@ -32,7 +33,7 @@
 </nav>
 </div>
 
-<main class="mt-12 p-2 mx-auto">
+<main class="mt-12 p-2">
 	<slot />
 </main>
 
@@ -74,7 +75,9 @@
     font-weight:bold;
 	}
 	nav {
-    max-width: 96ch;
+    max-width: 90ch;
+    width: 100%;
+    justify-content: space-between;
 	}
   nav ul {
     justify-content: end;

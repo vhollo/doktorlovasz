@@ -12,9 +12,9 @@
   <div class="prose card-title">
   {#if content.title}
     {#if ix == 0}
-      <h1>{content.title}</h1>
+      <h1 class="font-semibold">{content.title}</h1>
     {:else}
-      <h2>{content.title}</h2>
+      <h2 class="font-medium">{content.title}</h2>
     {/if}
   {/if}
   </div>

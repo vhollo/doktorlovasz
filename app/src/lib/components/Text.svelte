@@ -25,9 +25,9 @@
 <article class="prose gap-x-8 gap-y-0 {content.textBlock.length < 2 ? 'block' : 'grid'}">
   {#if content.title}
     {#if ix == 0}
-      <h1>{content.title}</h1>
+      <h1 class="font-semibold">{content.title}</h1>
     {:else}
-      <h2>{content.title}</h2>
+      <h2 class="font-medium">{content.title}</h2>
     {/if}
   {/if}
   <PortableText value={content.textBlock} components={formatBody}/>
