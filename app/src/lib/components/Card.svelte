@@ -9,15 +9,15 @@
 </script>
 
 <section class="card bg-neutral text-neutral-content max-w-prose "><div class="card-body">
-  <div class="prose card-title">
   {#if content.title}
-    {#if ix == 0}
-      <h1 class="font-semibold">{content.title}</h1>
-    {:else}
-      <h2 class="font-medium">{content.title}</h2>
-    {/if}
+    <div class="prose card-title">
+      {#if ix == 0}
+        <h1 class="font-semibold">{content.title}</h1>
+      {:else}
+        <h2 class="font-medium">{content.title}</h2>
+      {/if}
+    </div>
   {/if}
-  </div>
 {#each content.pageBuilder as c, ix}
   <Comps content={c} ix={0}/>
 {/each}
