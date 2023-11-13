@@ -4,9 +4,9 @@
 	import Themes from '$components/Themes.svelte';
 </script>
 
-<div class="navbar h-16 border-b-2 bg-primary text-base-content">
+<div class="navbar h-16 border-b-2 bg-primary text-primary-content">
 <nav class="mx-auto">
-	<a class="flex-none" href="/"><h1>Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
+	<a class="flex-none text-accent-content" href="/"><h1>Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1></a>
 
   <ul class="hidden min-[920px]:flex flex-1 menu menu-horizontal menu-sm">
     <li><a href="rendeles">Rendelési idők</a></li>
@@ -72,7 +72,6 @@
     top: 0;
     z-index: 999;
     font-weight:bold;
-    text-transform: uppercase;
 	}
 	nav {
     max-width: 96ch;
@@ -80,6 +79,7 @@
   nav ul {
     justify-content: end;
     width: max-content;
+    text-transform: uppercase;
   }
 
   nav > a {
