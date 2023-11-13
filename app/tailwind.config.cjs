@@ -14,15 +14,11 @@ const config = {
   // daisyUI config (optional - here are the default values)
   daisyui: {
     themes: [
-      "corporate", 
-      "dark", 
-      "light", 
-      "business",
       {
-        drlovasz: {
-          "primary": "#6e9F9C",
+        kriszta: {
+          "primary": "#c4b4a6",
           "secondary": "#c4b4a6",
-          "accent": "#6e9F9C",
+          "accent": "#c4b4a6",
           "neutral": "#ffffff",
           "base-100": "#ece7e3",
           "info": "#3abff8",
@@ -31,11 +27,15 @@ const config = {
           "error": "#f87272",
         },
       },
+      "business",
+      "corporate", 
+      "dark", 
+      "light", 
       {
-        kriszta: {
-          "primary": "#c4b4a6",
+        drlovasz: {
+          "primary": "#6e9F9C",
           "secondary": "#c4b4a6",
-          "accent": "#c4b4a6",
+          "accent": "#6e9F9C",
           "neutral": "#ffffff",
           "base-100": "#ece7e3",
           "info": "#3abff8",
