@@ -35,7 +35,7 @@
     </div>
   </div></section>
   {:else}
-  <section class="prose gap-x-8 gap-y-0 card text-base-content max-w-prosee bg-base-200"><div class="card-body">
+  <section class="prose gap-x-8 gap-y-0 card max-w-prosee bg-neutral text-neutral-content"><div class="card-body">
     <p class="card-body">{content.summary}</p>
   </div></section>
   {/if}
