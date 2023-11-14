@@ -1,5 +1,3 @@
-export const prerender = true
-//import { getPages } from '$lib/utils/sanity';
 import { getPage } from "$lib/utils/sanity";
 import { error } from "@sveltejs/kit";
 
