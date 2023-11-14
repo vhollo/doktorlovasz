@@ -27,10 +27,20 @@ const config = {
           "error": "#f87272",
         },
       },
-      "business",
+      {
+        business: {
+          "primary": "#6e9F9C",/* cfdae5 */
+          "secondary": "#7c909a",
+          "accent": "#ea6947",
+          "neutral": "#23282e",
+          "base-100": "#202020",
+          "info": "#0092d5",
+          "success": "#6bb187",
+          "warning": "#dbae59",
+          "error": "#ac3e31",
+        }
+      },
       "corporate", 
-      "dark", 
-      "light", 
       {
         drlovasz: {
           "primary": "#6e9F9C",

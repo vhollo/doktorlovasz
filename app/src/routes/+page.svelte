@@ -11,6 +11,7 @@
 </script>
 
 <svelte:head>
+  <title>{data.title}</title>
   <meta name="description" content={data.desc} />
   <meta name="keywords" content={data.keywords} />
 </svelte:head>

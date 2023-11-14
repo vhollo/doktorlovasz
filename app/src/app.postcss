@@ -3,12 +3,17 @@
 @tailwind base;
 
 :root {
-  /*min-height: 100vh;*/
 
   --padding-card: 1rem;
   --rounded-btn: 1rem;
   --max-pad: 2rem;
 
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .prose p, .prose ul, .prose ol, .prose dl, .prose table, footer + aside p {
@@ -24,7 +29,7 @@
 }
 
 header {
-  margin-bottom: 3rem;
+  margin-block: 3rem;
 }
 
 aside {
