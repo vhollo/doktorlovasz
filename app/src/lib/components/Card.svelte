@@ -8,7 +8,7 @@
   //console.log(content)
 </script>
 
-<section class="card bg-neutral text-neutral-content max-w-prose " class:min-[920px]:hidden={content.mobile}><div class="card-body">
+<section class="card bg-neutral text-neutral-content max-w-prose" class:min-[920px]:hidden={content.mobile}><div class="card-body">
   {#if content.title}
     <div class="prose card-title">
       {#if ix == 0}
@@ -27,11 +27,13 @@
   /*:global(article + h1) {
 
   }*/
-
-  .card-body {
+  /*.card {
+    width: 100%;
+  }*/
+  /*.card-body {
     max-width: max-content;
     margin-inline: auto;
-  }
+  }*/
 
   .card-title {
     margin-block-end: .75rem;

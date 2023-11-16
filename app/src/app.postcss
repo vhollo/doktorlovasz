@@ -162,7 +162,18 @@ svg {
   --tw-prose-td-borders: hsl(var(--c) / 0.2);
 }
 
-section > .card-body {
+/*section > .card-body {
   margin-inline: 0!important;
   max-width: none!important;
+}*/
+
+.collapse-content {
+  padding: 0;
+}
+.collapse-title {
+  padding: 0;
+  padding-right: calc(var(--padding-card) * 2);
+}
+.collapse-arrow > .collapse-title:after {
+  right: 0.4rem;
 }

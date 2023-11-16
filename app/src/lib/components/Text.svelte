@@ -22,7 +22,7 @@
 </script>
 
 
-<article class="prose gap-x-8 gap-y-0 {content.textBlock.length < 2 ? 'block' : 'grid'}">
+<article class="prose gap-x-8 gap-y-0 {content.textBlock.length < 2 || !content.twocols ? 'block' : 'min-[520px]:grid'}">
   {#if content.title}
     {#if ix == 0}
       <h1 class="font-semibold">{content.title}</h1>
@@ -32,9 +32,3 @@
   {/if}
   <PortableText value={content.textBlock} components={formatBody}/>
 </article>
-
-<style>
-  /*article {
-    @apply mx-4;
-  }*/
-</style>

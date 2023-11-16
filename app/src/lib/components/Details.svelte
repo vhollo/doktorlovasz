@@ -23,7 +23,7 @@
 
 
   {#if content.details}
-  <section class="prose gap-x-8 gap-y-0 card max-w-prosee text-base-content bg-base-200"><div class="card-body">
+  <section class="prose gap-x-8 gap-y-0 card max-w-prosee text-base-content bg-base-200">
     <div class="card-body collapse collapse-arrow">
       <input type="radio" name="details" /> 
       <p class="collapse-title">
@@ -33,11 +33,11 @@
         <PortableText value={content.details} components={formatBody}/>
       </div>
     </div>
-  </div></section>
+  </section>
   {:else}
-  <section class="prose gap-x-8 gap-y-0 card max-w-prosee bg-neutral text-neutral-content"><div class="card-body">
+  <section class="prose gap-x-8 gap-y-0 card max-w-prosee bg-neutral text-neutral-content">
     <p class="card-body">{content.summary}</p>
-  </div></section>
+  </section>
   {/if}
   
   <!--{#if content.details}
@@ -50,14 +50,14 @@
   {/if}-->
 
 <style>
-  .card-body {
+  /*.card-body {
     max-width: max-content;
     margin-inline: auto;
     padding: 0;
-  }
-  p.card-body {
+  }*/
+  /*p.card-body {
     padding: 1rem;
-  }
+  }*/
 
   details > summary {
   cursor: pointer;

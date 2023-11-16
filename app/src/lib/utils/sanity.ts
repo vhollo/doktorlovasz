@@ -61,7 +61,8 @@ export async function getPage (slug: string) {
                 "slug": @.reference->slug
               }
             }
-          }
+          },
+          twocols,
         },
     
         _type == "details" => {
@@ -113,7 +114,8 @@ export async function getPage (slug: string) {
                     "slug": @.reference->slug
                   }
                 }
-              }
+              },
+              twocols,
             },
         
             _type == "details" => {
