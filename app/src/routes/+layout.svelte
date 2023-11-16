@@ -7,7 +7,7 @@
 <div class="navbar h-16 border-b-2 bg-primary">
 <nav class="mx-auto">
 	<a class="flex-none" href="/">
-    <h1 class="btn btn-sm normal-case btn-primary bg-primary border-base-100 hover:border-base-100">Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1>
+    <h1 class="btn btn-sm normal-case text-lg btn-primary bg-primary border-base-100 hover:border-base-100">Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1>
   </a>
 
   <ul class="hidden min-[920px]:flex flex-1 menu menu-horizontal menu-sm">
