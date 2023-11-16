@@ -8,7 +8,7 @@
   //console.log(content)
 </script>
 
-<section class="card bg-neutral text-neutral-content max-w-prose" class:min-[920px]:hidden={content.mobile}><div class="card-body">
+<section class="card bg-base-200 text-neutral-content max-w-prose" class:min-[920px]:hidden={content.mobile}><div class="card-body">
   {#if content.title}
     <div class="prose card-title">
       {#if ix == 0}
