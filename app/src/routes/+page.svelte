@@ -19,8 +19,8 @@
 {#each data.pageBuilder as content, ix}
   <Comps {content} {ix}/>
 {/each}
-<aside class="mx-auto text-center text-secondary">
-  <date class="text-sm">Frissítve: 
+<aside class="mx-auto text-center">
+  <date class="text-sm text-primary">Frissítve: 
     {formatDate(data._updateAt || data._createdAt)}
   </date>
 </aside>
