@@ -20,7 +20,7 @@
   <Comps {content} {ix}/>
 {/each}
 <aside class="mx-auto text-center">
-  <date class="text-sm text-primary">Frissítve: 
+  <date class="text-sm text-accent">Frissítve: 
     {formatDate(data._updateAt || data._createdAt)}
   </date>
 </aside>
