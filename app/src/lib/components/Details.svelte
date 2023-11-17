@@ -23,7 +23,7 @@
 
 
   {#if content.details}
-  <section class="prose gap-x-8 gap-y-0 card max-w-prosee text-base-content bg-base-200">
+  <section class="prose gap-x-8 gap-y-0 card max-w-prosee text-base-content bg-neutral">
     <div class="card-body collapse collapse-arrow">
       <input type="radio" name="details" /> 
       <p class="collapse-title">
@@ -35,7 +35,7 @@
     </div>
   </section>
   {:else}
-  <section class="prose gap-x-8 gap-y-0 card max-w-prosee bg-neutral text-neutral-content">
+  <section class="prose gap-x-8 gap-y-0 card max-w-prosee bg-base-200 text-neutral-content">
     <p class="card-body">{content.summary}</p>
   </section>
   {/if}
