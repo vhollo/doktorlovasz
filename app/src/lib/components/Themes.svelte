@@ -80,7 +80,7 @@
 <style>
     .drawer {
     position: fixed;
-    bottom: 0;
+    bottom: 2rem;
     /*width: 100%;*/
     margin-left: auto;
   }
