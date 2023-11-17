@@ -7,10 +7,10 @@
 <div class="navbar h-16 border-b-2 bg-primary">
 <nav class="mx-auto">
 	<a class="flex-none" href="/">
-    <h1 class="btn btn-sm normal-case text-lg btn-primary bg-primary border-base-100 hover:border-base-100">Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1>
+    <h1 class="btn btn-sm normal-case text-lg btn-primary bg-primary border-base-100 hover:border-base-100 font-normal">Dr.&nbsp;Lovász&nbsp;Sándor&nbsp;Ph.D.</h1>
   </a>
 
-  <ul class="hidden min-[1024px]:flex flex-1 menu menu-horizontal menu-sm">
+  <ul class="hidden min-[1200px]:flex flex-1 menu menu-horizontal menu-sm font-medium">
     <li><a href="rendeles">Rendelési idők</a></li>
     <li><a href="ic-bps">IC/BPS</a></li>
     <li><a href="eletrajz">Szakmai életrajz</a></li>
@@ -18,7 +18,7 @@
     <li><a href="publikaciok">Publikációk</a></li>
   </ul>
 
-  <div class="dropdown dropdown-end ml-auto min-[1024px]:hidden">
+  <div class="dropdown dropdown-end ml-auto min-[1200px]:hidden">
     <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
     <!-- svelte-ignore a11y-label-has-associated-control -->
     <label tabindex="0" aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
