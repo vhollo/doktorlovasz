@@ -39,31 +39,3 @@
     <p class="card-body">{content.summary}</p>
   </section>
   {/if}
-  
-  <!--{#if content.details}
-    <details>
-      <summary><b>{content.summary}</b></summary>
-      <PortableText value={content.details} components={formatBody}/>
-    </details>
-  {:else}
-    <p><b>{content.summary}</b></p>
-  {/if}-->
-
-<style>
-  /*.card-body {
-    max-width: max-content;
-    margin-inline: auto;
-    padding: 0;
-  }*/
-  /*p.card-body {
-    padding: 1rem;
-  }*/
-
-  details > summary {
-  cursor: pointer;
-}
-  details > summary, details > :global(p) {
-  margin-bottom: .5rem;
-}
-
-</style>
