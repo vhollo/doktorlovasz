@@ -19,7 +19,7 @@
 {#each data.pageBuilder as content, ix}
   <Comps {content} {ix}/>
 {/each}
-<aside class="mx-auto text-center">
+<aside class="mx-auto my-8 text-center">
   <date class="text-sm text-accent">Frissítve: 
     {formatDate(data._updateAt || data._createdAt)}
   </date>
