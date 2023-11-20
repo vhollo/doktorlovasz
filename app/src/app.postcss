@@ -32,11 +32,11 @@ header {
   margin-block: 3rem;
 }
 
-aside {
-  /*margin-block: 3rem;*/
+/*aside {
   margin-block: 0;
-}
-aside + *:not(aside) {
+}*/
+/*margin-block: 3rem;*/
+  aside + *:not(aside) {
   margin-top: 2.5rem;
 }
 
@@ -124,7 +124,7 @@ section.prose > * {
 /*.prose p, .prose ul, .prose li {
   margin-block: 0;
 }*/
-.prose > p:not(:empty), .prose > h4:not(:empty) {
+.prose p:not(:empty), .prose > h4:not(:empty) {
   margin-top: .75rem; /* ez jo */
   margin-bottom: 0;
 }
@@ -217,3 +217,4 @@ svg {
   min-height: 1.5rem;
   height: min-content;
 }
+
