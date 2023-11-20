@@ -194,6 +194,9 @@ svg {
 
 @tailwind utilities;
 
+.prose :where(blockquote):not(:where([class~="not-prose"],[class~="not-prose"] *)) em {
+  font-style: normal;
+}
 
 .collapse {
   width: auto;
