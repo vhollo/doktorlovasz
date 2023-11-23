@@ -11,11 +11,11 @@
   </a>
 
   <ul class="hidden min-[920px]:flex flex-1 menu menu-horizontal menu-sm font-medium">
-    <li><a href="rendeles">Rendelési idők</a></li>
-    <li><a href="ic-bps">IC/BPS</a></li>
     <li><a href="eletrajz">Szakmai életrajz</a></li>
     <li><a href="talalmanyok">Találmányok</a></li>
+    <li><a href="ic-bps">IC/BPS</a></li>
     <li><a href="publikaciok">Publikációk</a></li>
+    <li><a href="rendeles">Rendelési idők</a></li>
   </ul>
 
   <div class="dropdown dropdown-end ml-auto min-[920px]:hidden">
@@ -25,12 +25,12 @@
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </label>
     <ul class="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow bg-primary rounded-box rounded-t-none">
-      <li><a href="rendeles">Rendelési idők</a></li>
-      <li><a href="ic-bps">IC/BPS</a></li>
       <li><a href="eletrajz">Szakmai életrajz</a></li>
       <li><a href="talalmanyok">Találmányok</a></li>
+      <li><a href="ic-bps">IC/BPS</a></li>
       <li><a href="publikaciok">Publikációk</a></li>
-      </ul>
+      <li><a href="rendeles">Rendelési idők</a></li>
+    </ul>
   </div>
 </nav>
 </div>
