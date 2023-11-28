@@ -7,7 +7,7 @@
     // 👆 false parameter is required for svelte
   })
 
-  let font = false
+  let font = false, gradient = true
   
 </script>
 
@@ -17,6 +17,16 @@
     :root {
       font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       line-height: 1.5;
+    }
+    article p, article ul, article ol, article dl, article table, footer + aside p {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+  </style>
+  {/if}
+  {#if gradient}
+  <style>
+    :root {
+      background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     }
     article p, article ul, article ol, article dl, article table, footer + aside p {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -69,6 +79,14 @@
           <span class="label-text system">System<br>font</span> 
           <input type="checkbox" class="toggle" bind:checked={font}/>
           <span class="label-text josefin">Josefin<br>Sans</span> 
+        </label>
+      </li>
+
+      <li class="form-control my-2">
+        <label class="label cursor-pointer">
+          <span class="label-text system">Normal<br>background</span> 
+          <input type="checkbox" class="toggle" bind:checked={gradient}/>
+          <span class="label-text josefin">Gradient<br>background</span> 
         </label>
       </li>
     </ul>
