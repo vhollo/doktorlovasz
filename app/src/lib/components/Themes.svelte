@@ -75,6 +75,7 @@
       <li class="btn" data-set-theme="night">Night</li>-->
 
       <li class="form-control my-2">
+        <p>Font style</p>
         <label class="label cursor-pointer">
           <span class="label-text system">System<br>font</span> 
           <input type="checkbox" class="toggle" bind:checked={font}/>
@@ -83,10 +84,11 @@
       </li>
 
       <li class="form-control my-2">
+        <p>Background</p>
         <label class="label cursor-pointer">
-          <span class="label-text system">Normal<br>background</span> 
+          <span class="label-text system">Normal</span> 
           <input type="checkbox" class="toggle" bind:checked={gradient}/>
-          <span class="label-text josefin">Gradient<br>background</span> 
+          <span class="label-text josefin">Gradient</span> 
         </label>
       </li>
     </ul>
