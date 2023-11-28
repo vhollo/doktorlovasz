@@ -25,8 +25,11 @@
   {/if}
   {#if gradient}
   <style>
-    :root {
+    :root:not([data-theme='business']) {
       background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    }
+    :root[data-theme='business'] {
+      background-image: linear-gradient(to right, #434343 0%, black 100%);
     }
     article p, article ul, article ol, article dl, article table, footer + aside p {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
