@@ -31,9 +31,9 @@
     :root[data-theme='business'] {
       background-image: linear-gradient(to right, #434343 0%, black 100%);
     }
-    article p, article ul, article ol, article dl, article table, footer + aside p {
+    /*article p, article ul, article ol, article dl, article table, footer + aside p {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
+    }*/
   </style>
   {/if}
   <style>
