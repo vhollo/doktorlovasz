@@ -43,6 +43,7 @@ const config = {
       {
         nord: {
           ...require("daisyui/src/theming/themes")["nord"],
+          "neutral": "#23282e",
           /*primary: "blue",
           secondary: "teal",*/
         },
