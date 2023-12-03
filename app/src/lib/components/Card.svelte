@@ -8,20 +8,22 @@
   //console.log(content)
 </script>
 
-<section class="card bg-neutral text-neutral-content max-w-prose" class:min-[1024px]:hidden={content.mobile}><div class="card-body">
-  {#if content.title}
-    <div class="prose card-title">
-      {#if ix == 0}
-        <h1 class="font-semibold">{content.title}</h1>
-      {:else}
-        <h2 class="font-medium">{content.title}</h2>
-      {/if}
-    </div>
-  {/if}
-{#each content.pageBuilder as c, ix}
-  <Comps content={c} ix={0}/>
-{/each}
-</div></section>
+<section class="card bg-neutral text-neutral-content max-w-prose" class:min-[840px]:hidden={content.mobile}>
+  <div class="card-body">
+    {#if content.title}
+      <div class="prose card-title">
+        {#if ix == 0}
+          <h1 class="font-semibold">{content.title}</h1>
+        {:else}
+          <h2 class="font-medium">{content.title}</h2>
+        {/if}
+      </div>
+    {/if}
+    {#each content.pageBuilder as c, ix}
+      <Comps content={c} ix={0}/>
+    {/each}
+  </div>
+</section>
 
 <style>
   /*:global(article + h1) {

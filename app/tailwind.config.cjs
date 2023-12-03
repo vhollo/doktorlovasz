@@ -40,7 +40,13 @@ const config = {
           "error": "#ac3e31",
         }
       },
-      "corporate", 
+      {
+        nord: {
+          ...require("daisyui/src/theming/themes")["nord"],
+          /*primary: "blue",
+          secondary: "teal",*/
+        },
+      },
       {
         drlovasz: {
           "primary": "#6e9F9C",

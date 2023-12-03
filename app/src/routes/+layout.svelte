@@ -4,13 +4,15 @@
 	import Themes from '$components/Themes.svelte';
 </script>
 
-<div class="navbar h-16 border-b-2 bg-primary">
+<div class="navbar h-20 border-b-2 bg-primary">
+
+  <nav class="justify-center">Dr. Lovász Sándor Ph.D</nav>
+
 <nav class="mx-auto text-primary-content">
-	<a class="flex-none" href="/">
-    <h1 class="btn btn-sm normal-case text-lg btn-primary border-base-100 hover:border-base-100 font-normal">Kezdőlap</h1>
+	<a href="/" class="flex-none btn btn-sm normal-case text-xl hover:btn-primary border-primary hover:border-base-100 font-normal p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-0.75 -0.75 24 24" height="24" width="24"><g id="home-1--home-house-roof-shelter"><path id="Vector 1" stroke="#000000" d="M20.625 20.625H1.875V10.3125l9.375 -8.4375 9.375 8.4375v10.3125Z" stroke-width="1.5"></path></g></svg>
   </a>
 
-  <ul class="hidden min-[1024px]:flex flex-1 menu menu-horizontal menu-sm font-medium gap-4">
+  <ul class="hidden min-[840px]:flex flex-1 menu menu-horizontal menu-sm font-medium gap-4">
     <li><a class="btn btn-xs" href="eletrajz">Szakmai életrajz</a></li>
     <li><a class="btn btn-xs" href="talalmanyok">Találmányok</a></li>
     <li><a class="btn btn-xs" href="ic-bps">IC/BPS</a></li>
@@ -18,18 +20,18 @@
     <li><a class="btn btn-xs" href="rendeles">Rendelési idők</a></li>
   </ul>
 
-  <div class="dropdown dropdown-end ml-auto min-[1024px]:hidden">
+  <div class="dropdown dropdown-end ml-auto min-[840px]:hidden">
     <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
     <!-- svelte-ignore a11y-label-has-associated-control -->
     <label tabindex="0" aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </label>
     <ul class="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow bg-primary rounded-box rounded-t-none join">
-      <li><a class="btn btn-xs" href="eletrajz">Szakmai életrajz</a></li>
-      <li><a class="btn btn-xs" href="talalmanyok">Találmányok</a></li>
-      <li><a class="btn btn-xs" href="ic-bps">IC/BPS</a></li>
-      <li><a class="btn btn-xs" href="publikaciok">Publikációk</a></li>
-      <li><a class="btn btn-xs" href="rendeles">Rendelési idők</a></li>
+      <li><a class="btn btn-xs join-item" href="eletrajz">Szakmai életrajz</a></li>
+      <li><a class="btn btn-xs join-item" href="talalmanyok">Találmányok</a></li>
+      <li><a class="btn btn-xs join-item" href="ic-bps">IC/BPS</a></li>
+      <li><a class="btn btn-xs join-item" href="publikaciok">Publikációk</a></li>
+      <li><a class="btn btn-xs join-item" href="rendeles">Rendelési idők</a></li>
     </ul>
   </div>
 </nav>
@@ -72,14 +74,16 @@
   }*/
 	.navbar {
     position: sticky;
-    top: 0;
+    /*top: -1.75rem;*/
+    top: -1.75rem;
     z-index: 999;
     font-weight:bold;
+    flex-direction: column;
 	}
 	nav {
     max-width: 90ch;
     width: 100%;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 	}
   nav ul {
     justify-content: end;
@@ -87,12 +91,9 @@
     text-transform: uppercase;
   }
 
-  nav > a {
-    padding-left: 0;
-    padding-right: 1.25rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
+  /*nav > a {
+    margin-top: -1rem;
+  }*/
 
   /*li:last-child > a {
     padding-right: 0;
