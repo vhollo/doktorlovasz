@@ -144,9 +144,9 @@ section.prose > * {
   grid-column-end: span 2;
 }
 
-article.prose {
+/*article.prose {
   @apply text-neutral-content;
-}
+}*/
 
 /*img {
   @apply drop-shadow-lg;
@@ -154,7 +154,10 @@ article.prose {
 svg {
   display: inline-block;
 }
-
+svg path {
+  /*stroke: var(--ac);*/
+  stroke: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
+}
 :root .prose {
   --tw-prose-headings: hsl(var(--c) / 0.8);
   --tw-prose-body: hsl(var(--c) / 0.8);

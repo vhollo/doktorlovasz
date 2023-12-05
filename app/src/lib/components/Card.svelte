@@ -8,7 +8,7 @@
   //console.log(content)
 </script>
 
-<section class="card bg-neutral text-neutral-content max-w-prose" class:min-[840px]:hidden={content.mobile}>
+<section class="card bg-neutral tw-prose-bold t-ext-neutral-content max-w-prose" class:min-[840px]:hidden={content.mobile}>
   <div class="card-body">
     {#if content.title}
       <div class="prose card-title">
@@ -40,4 +40,5 @@
   .card-title {
     margin-block-end: .75rem;
   }
+
 </style>
