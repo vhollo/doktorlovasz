@@ -16,51 +16,44 @@ const config = {
     themes: [
       {
         kriszta: {
+          ...require("daisyui/src/theming/themes")["corporate"],
           "primary": "#c4b4a6",
           "secondary": "#c4b4a6",
           "accent": "#c4b4a6",
           "neutral": "#ffffff",
           "base-100": "#ece7e3",
-          "info": "#3abff8",
-          "success": "#36d399",
-          "warning": "#fbbd23",
-          "error": "#f87272",
         },
       },
       {
         business: {
+          ...require("daisyui/src/theming/themes")["business"],
           "primary": "#6e9F9C",/* cfdae5 */
-          "secondary": "#7c909a",
-          "accent": "#ea6947",
+          "secondary": "#6e9F9C",
+          "accent": "#23282e",
+          "accent-content": "#6e9F9C",
           "neutral": "#23282e",
           "base-100": "#202020",
-          "info": "#0092d5",
-          "success": "#6bb187",
-          "warning": "#dbae59",
-          "error": "#ac3e31",
         }
       },
       {
-        nord: {
+        blueish: {
           ...require("daisyui/src/theming/themes")["nord"],
-          //"primary": "#ace0f9",
+          "primary": "#fff1eb",
+          "secondary": "#fff1eb",
+          "accent": "#fff1eb",
           "neutral": "#fff1eb",
-          "base-100": "#ece7e3",
-          /*primary: "blue",
-          secondary: "teal",*/
+          "base-100": "#ace0f9",
         },
       },
       {
         drlovasz: {
+          ...require("daisyui/src/theming/themes")["corporate"],
           "primary": "#6e9F9C",
           "secondary": "#c4b4a6",
-          "accent": "#6e9F9C",
+          "accent": "#c4b4a6",
+          "accent-content": "#6e9F9C",
           "neutral": "#ffffff",
           "base-100": "#ece7e3",
-          "info": "#3abff8",
-          "success": "#36d399",
-          "warning": "#fbbd23",
-          "error": "#f87272",
         },
       },
     ], // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]

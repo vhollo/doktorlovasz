@@ -9,15 +9,16 @@
   <nav class="hidden min-[840px]:flex justify-center text-xl">Dr. Lovász Sándor Ph.D</nav>
 
   <nav class="mx-auto text-primary-content justify-between">
-    <a href="/" class="flex-none btn btn-sm normal-case text-xl hover:btn-primary border-primary hover:border-base-100 font-normal p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-0.75 -0.75 24 24" height="24" width="24"><g id="home-1--home-house-roof-shelter"><path id="Vector 1" stroke="#000000" d="M20.625 20.625H1.875V10.3125l9.375 -8.4375 9.375 8.4375v10.3125Z" stroke-width="1.5"></path></g></svg>
-    </a>
+    <!--<a href="/" class="flex-none btn btn-sm normal-case text-xl hover:btn-primary border-primary hover:border-base-100 font-normal p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-0.75 -0.75 24 24" height="24" width="24"><g id="home-1--home-house-roof-shelter"><path id="Vector 1" stroke="#000000" d="M20.625 20.625H1.875V10.3125l9.375 -8.4375 9.375 8.4375v10.3125Z" stroke-width="1.5"></path></g></svg>
+    </a>-->
 
-    <ul class="hidden min-[840px]:flex flex-1 menu menu-horizontal menu-sm font-medium gap-4">
-      <li><a class="btn btn-xs" href="eletrajz">Szakmai életrajz</a></li>
-      <li><a class="btn btn-xs" href="talalmanyok">Találmányok</a></li>
-      <li><a class="btn btn-xs" href="ic-bps">IC/BPS</a></li>
-      <li><a class="btn btn-xs" href="publikaciok">Publikációk</a></li>
-      <li><a class="btn btn-xs" href="rendeles">Rendelési idők</a></li>
+    <ul class="hidden min-[840px]:flex flex-1 menu menu-horizontal !justify-center menu-sm font-medium gap-4">
+      <li><a class="btn btn-xs bg-neutral bg-neutral" href="/">Kezdőlap</a></li>
+      <li><a class="btn btn-xs bg-neutral" href="eletrajz">Szakmai életrajz</a></li>
+      <li><a class="btn btn-xs bg-neutral" href="talalmanyok">Találmányok</a></li>
+      <li><a class="btn btn-xs bg-neutral" href="ic-bps">IC/BPS</a></li>
+      <li><a class="btn btn-xs bg-neutral" href="publikaciok">Publikációk</a></li>
+      <li><a class="btn btn-xs bg-neutral" href="rendeles">Rendelési idők</a></li>
     </ul>
 
     <div class="min-[840px]:hidden text-xl">Dr. Lovász Sándor Ph.D</div>
@@ -28,11 +29,12 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
       <ul class="menu menu-sm dropdown-content mt-2 z-[999] p-2 shadow bg-primary rounded-box rounded-t-none join join-vertical">
-        <li><a class="btn btn-xs join-item" href="eletrajz">Szakmai életrajz</a></li>
-        <li><a class="btn btn-xs join-item" href="talalmanyok">Találmányok</a></li>
-        <li><a class="btn btn-xs join-item" href="ic-bps">IC/BPS</a></li>
-        <li><a class="btn btn-xs join-item" href="publikaciok">Publikációk</a></li>
-        <li><a class="btn btn-xs join-item" href="rendeles">Rendelési idők</a></li>
+        <li><a class="join-item" href="/">Kezdőlap</a></li>
+        <li><a class="join-item" href="eletrajz">Szakmai életrajz</a></li>
+        <li><a class="join-item" href="talalmanyok">Találmányok</a></li>
+        <li><a class="join-item" href="ic-bps">IC/BPS</a></li>
+        <li><a class="join-item" href="publikaciok">Publikációk</a></li>
+        <li><a class="join-item" href="rendeles">Rendelési idők</a></li>
       </ul>
     </div>
   </nav>
@@ -43,7 +45,7 @@
 </main>
 
 
-<footer class="footer footer-center flex-nowrap p-4 bg-base-300 text-base-content">
+<footer class="footer footer-center flex-nowrap p-4 bg-primary text-base-content">
   <div>
     <p class="mx-auto w-max">
       Made with <svg
@@ -101,6 +103,8 @@
 
   .btn {
     line-height: 1rem;
+    background: none;
+    border: none;
   }
 
 </style>

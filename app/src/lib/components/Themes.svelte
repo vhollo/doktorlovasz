@@ -7,50 +7,53 @@
     // 👆 false parameter is required for svelte
   })
 
-  let font = false, gradient = false, square = false
+  let font = false, gradient = true, square = false
   
 </script>
 
 <svelte:head>
   {#if font}
-  <style>
-    :root {
-      font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      line-height: 1.5;
-    }
-    article p, article ul, article ol, article dl, article table, footer + aside p {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-  </style>
+    <style>
+      :root {
+        font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-top: 0.25rem;
+      }
+      article p, article ul, article ol, article dl, article table, footer + aside p {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+    </style>
   {/if}
+
   {#if gradient}
-  <style>
-    :root[data-theme='kriszta'] {
-      background-image: linear-gradient(to top, #c4b4a6 0%, #ece7e3 100%);
-    }
-    :root[data-theme='drlovasz'] {
-      background-image: linear-gradient(to top, #c4b4a6 0%, #ece7e3 100%);
-    }
-    :root[data-theme='business'] {
-      background-image: linear-gradient(to right, #434343 0%, black 100%);
-    }
-    :root[data-theme='nord'] {
-      background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    }
-    /*article p, article ul, article ol, article dl, article table, footer + aside p {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }*/
-  </style>
+    <style>
+      :root[data-theme='kriszta'] {
+        background-image: linear-gradient(to top, #c4b4a6 0%, #ece7e3 100%);
+      }
+      :root[data-theme='drlovasz'] {
+        background-image: linear-gradient(to top, #c4b4a6 0%, #ece7e3 100%);
+      }
+      :root[data-theme='business'] {
+        /*background-image: linear-gradient(to right, #434343 0%, black 100%);*/
+        background-image: linear-gradient(75deg, oklch(var(--b3)), #23282e);
+      }
+      :root[data-theme='blueish'] {
+        /*background-image: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%);*/
+        background-image: linear-gradient(75deg, #fff1eb, #ace0f9);
+      }
+      /*article p, article ul, article ol, article dl, article table, footer + aside p {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }*/
+    </style>
   {/if}
   {#if square}
-  <style>
-    :root *, .card {
-      --rounded-box: 0;
-    }
-    /*article p, article ul, article ol, article dl, article table, footer + aside p {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }*/
-  </style>
+    <style>
+      :root *, .card {
+        --rounded-box: 0;
+      }
+      /*article p, article ul, article ol, article dl, article table, footer + aside p {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }*/
+    </style>
   {/if}
   <style>
     .josefin {
@@ -82,7 +85,7 @@
 
       <li class="my-2 border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="business" data-act-class="!outline-base-content"><div data-theme="business" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-secondary col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">drlovasz dark</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </li>
       
-      <li class="my-2 border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="nord" data-act-class="!outline-base-content"><div data-theme="nord" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-secondary col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">blueish wip</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </li>
+      <li class="my-2 border-base-content/20 hover:border-base-content/40 overflow-hidden rounded-lg border outline outline-2 outline-offset-2 outline-transparent !outline-base-content" data-set-theme="blueish" data-act-class="!outline-base-content"><div data-theme="blueish" class="bg-base-100 text-base-content w-full cursor-pointer font-sans"><div class="grid grid-cols-5 grid-rows-3"><div class="bg-base-200 col-start-1 row-span-2 row-start-1"></div> <div class="bg-secondary col-start-1 row-start-3"></div> <div class="bg-base-100 col-span-4 col-start-2 row-span-3 row-start-1 flex flex-col gap-1 p-2"><div class="font-bold">blueish (wip)</div> <div class="flex flex-wrap gap-1"><div class="bg-primary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-primary-content text-sm font-bold">A</div></div> <div class="bg-secondary flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-secondary-content text-sm font-bold">A</div></div> <div class="bg-accent flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-accent-content text-sm font-bold">A</div></div> <div class="bg-neutral flex aspect-square w-5 items-center justify-center rounded lg:w-6"><div class="text-neutral-content text-sm font-bold">A</div></div></div></div></div></div> </li>
 
       <!--<li class="btn" data-set-theme="light">Light</li>
       <li class="btn" data-set-theme="emerald">Emerald</li>
@@ -125,7 +128,7 @@
 </div>
 
 <style>
-    .drawer {
+  .drawer {
     position: fixed;
     bottom: 1.5rem;
     /*width: 100%;*/
@@ -135,5 +138,8 @@
     margin-left: auto;
     z-index: 999;
   }
+  /*.drawer-side {
+    transform: scale(0.75);
+  }*/
 
 </style>
