@@ -12,11 +12,6 @@
   {#if content.image}
     {@const image = content.image}
     <figure class="gap-x-8 gap-y-0 flex flex-1">
-      <img
-        class="object-contain filter-none"
-        src={urlFor(image).url()}
-        alt="Cover image for {image.alt}"
-      />
       <figcaption>
         {#if ix == 0}
           <h1 class="font-semibold">{content.heading}</h1>
@@ -25,6 +20,11 @@
         {/if}
         {#if content.tagline}<h3 class="">{content.tagline}</h3>{/if}
       </figcaption>
+      <img
+        class="object-contain filter-none ml-auto"
+        src={urlFor(image).url()}
+        alt="Cover image for {image.alt}"
+      />
     </figure>
   {:else}
     {#if ix == 0}
