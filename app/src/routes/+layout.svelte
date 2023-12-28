@@ -1,7 +1,7 @@
 <script>
 	import '$src/app.postcss';
   //import { dev } from '$app/environment'
-	import Themes from '$components/Themes.svelte';
+	//import Themes from '$components/Themes.svelte';
 </script>
 
 <div class="navbar top-0 min-[840px]:-top-8 h-12 min-[840px]:h-24 gap-2 border-b-2 bg-primary">
@@ -13,28 +13,26 @@
     </a>-->
 
     <ul class="hidden min-[840px]:flex flex-1 menu menu-horizontal !justify-center menu-sm font-medium gap-4">
-      <li><a class="btn btn-xs bg-neutral bg-neutral" href="/">Kezdőlap</a></li>
-      <li><a class="btn btn-xs bg-neutral" href="eletrajz">Szakmai életrajz</a></li>
-      <li><a class="btn btn-xs bg-neutral" href="talalmanyok">Találmányok</a></li>
-      <li><a class="btn btn-xs bg-neutral" href="ic-bps">IC/BPS</a></li>
-      <li><a class="btn btn-xs bg-neutral" href="publikaciok">Publikációk</a></li>
-      <li><a class="btn btn-xs bg-neutral" href="rendeles">Rendelési idők</a></li>
+      <li><a tabindex="0" class="btn btn-xs bg-neutral bg-neutral" href="/">Kezdőlap</a></li>
+      <li><a tabindex="0" class="btn btn-xs bg-neutral" href="eletrajz">Szakmai életrajz</a></li>
+      <li><a tabindex="0" class="btn btn-xs bg-neutral" href="talalmanyok">Találmányok</a></li>
+      <li><a tabindex="0" class="btn btn-xs bg-neutral" href="ic-bps">IC/BPS</a></li>
+      <li><a tabindex="0" class="btn btn-xs bg-neutral" href="publikaciok">Publikációk</a></li>
+      <li><a tabindex="0" class="btn btn-xs bg-neutral" href="rendeles">Rendelési idők</a></li>
     </ul>
 
     <div class="min-[840px]:hidden text-xl">Dr. Lovász Sándor Ph.D</div>
     <div class="dropdown dropdown-end ml--auto min-[840px]:hidden">
-      <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-      <!-- svelte-ignore a11y-label-has-associated-control -->
-      <label tabindex="0" aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
+      <div role="button" tabindex="0" aria-label="Dropdown menu" class="btn btn-ghost btn-sm p-1">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </label>
+      </div>
       <ul class="menu menu-sm dropdown-content mt-2 z-[999] p-2 shadow bg-primary rounded-box rounded-t-none join join-vertical">
-        <li><a class="join-item" href="/">Kezdőlap</a></li>
-        <li><a class="join-item" href="eletrajz">Szakmai életrajz</a></li>
-        <li><a class="join-item" href="talalmanyok">Találmányok</a></li>
-        <li><a class="join-item" href="ic-bps">IC/BPS</a></li>
-        <li><a class="join-item" href="publikaciok">Publikációk</a></li>
-        <li><a class="join-item" href="rendeles">Rendelési idők</a></li>
+        <li><a tabindex="0" href="/">Kezdőlap</a></li>
+        <li><a tabindex="0" href="eletrajz">Szakmai életrajz</a></li>
+        <li><a tabindex="0" href="talalmanyok">Találmányok</a></li>
+        <li><a tabindex="0" href="ic-bps">IC/BPS</a></li>
+        <li><a tabindex="0" href="publikaciok">Publikációk</a></li>
+        <li><a tabindex="0" href="rendeles">Rendelési idők</a></li>
       </ul>
     </div>
   </nav>
@@ -67,7 +65,7 @@
 </footer>
 
 <!--{#if dev}-->
-  <Themes/>
+  <!--<Themes/>-->
 <!--{/if}-->
 
 
